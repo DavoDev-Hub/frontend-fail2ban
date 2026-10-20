@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mis favoritos · Agregar</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="bar">
+        <strong>Mis favoritos</strong>
+        <nav>
+            <span class="muted">Sesión: <span id="who"></span></span>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="add.html" class="active">Agregar</a>
+            <button id="logout" class="link">Cerrar sesión</button>
+        </nav>
+    </header>
+
+    <main class="card narrow">
+        <h1>Agregar elemento</h1>
+        <form id="addForm">
+            <label>Nombre
+                <input id="name" type="text" placeholder="The Legend of Zelda" required>
+            </label>
+            <label>Categoría
+                <select id="category">
+                    <option>Videojuegos</option>
+                    <option>Ropa</option>
+                    <option>Zapatos</option>
+                    <option>Otros</option>
+                </select>
+            </label>
+            <button type="submit">Guardar</button>
+            <p id="msg"></p>
+        </form>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.7.9/dist/axios.min.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/add.js"></script>
+</body>
+</html>
